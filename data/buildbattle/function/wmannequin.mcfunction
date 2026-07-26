@@ -1,0 +1,1 @@
+$summon minecraft:mannequin ~ ~ ~ {profile:{id:$(UUID)},Rotation:$(Rotation)}

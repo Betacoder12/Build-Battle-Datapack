@@ -1,0 +1,1 @@
+execute positioned as @e[type=marker,limit=1,name=bb_spawn] as @a[distance=..24] unless score @s builder_number matches 1.. run function buildbattle:builder

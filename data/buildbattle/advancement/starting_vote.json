@@ -1,0 +1,18 @@
+{
+    "criteria": {
+      "using_item": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "item": {
+            "items": "minecraft:apple",
+            "predicates": {
+              "minecraft:custom_data": "{bb_starts:true}"
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "buildbattle:start_vote"
+    }
+  }
