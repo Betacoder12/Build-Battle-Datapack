@@ -1,5 +1,9 @@
+tag @a[tag=voting] remove voting
 scoreboard players set #tmp players_voted 0
 scoreboard players add #tmp bb_voting_on 1
+
+execute as @a[tag=builder] unless score @s builder_number = #tmp bb_voting_on run tag @s add voting
+execute as @e[type=marker] if score @s builder_number = #tmp bb_voting_on run tp @a[tag=builder,tag=voting] @s
 
 execute as @a[tag=builder] unless score @s builder_number = #tmp bb_voting_on run give @s apple[item_name={text:"One Star",color:gold},custom_data={stars:1}]
 execute as @a[tag=builder] unless score @s builder_number = #tmp bb_voting_on run give @s apple[item_name={text:"Two Stars",color:gold},custom_data={stars:2}]

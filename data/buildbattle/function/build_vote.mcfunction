@@ -1,3 +1,8 @@
+title @a[tag=builder] title "Time's Up!"
+title @a[tag=builder] subtitle "Start Voting!"
+
+playsound block.note_block.bell player @a[tag=builder]
+
 schedule clear buildbattle:build_vote
 scoreboard objectives add bb_voting_on dummy
 scoreboard objectives add bb_points dummy
@@ -9,12 +14,11 @@ scoreboard players set #tmp bb_voting_on 0
 scoreboard players set @a[tag=builder] vote_count 0
 
 scoreboard objectives add pntv dummy
-scoreboard objectives add one dummy
-scoreboard players set #build one 1
 execute store result score #build pntv run scoreboard players get #tmp bb_voting_on
-scoreboard players operation #build pntv -= #build one
-scoreboard objectives remove one
+scoreboard players remove #build pntv 1
 
 clear @a[tag=builder] *
+
+execute as @a[tag=builder] run function buildbattle:markplayers
 
 function buildbattle:builder_voting

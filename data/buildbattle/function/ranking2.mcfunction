@@ -20,3 +20,5 @@ scoreboard players set #tmp bb_player_count 0
 scoreboard players set #tmp started 0
 
 execute positioned as @e[type=marker,limit=1,name=bb_spawn] run execute positioned ~14 ~-1 ~-90 run place template buildbattle:bb_arenas
+
+kill @e[type=marker,tag=builder_marker]

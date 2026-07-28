@@ -47,4 +47,7 @@ scoreboard objectives remove rand_build
 title @a[tag=builder] subtitle "You have 30mins"
 playsound block.note_block.bell player @a[tag=builder]
 
+schedule function buildbattle:timers/15mins 900s
+schedule function buildbattle:timers/5mins 1500s
+schedule function buildbattle:timers/1min 1740s
 schedule function buildbattle:build_vote 1800s

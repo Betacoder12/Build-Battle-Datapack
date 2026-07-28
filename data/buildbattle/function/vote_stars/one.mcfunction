@@ -5,4 +5,4 @@ scoreboard players add #tmp players_voted 1
 clear @s *
 
 execute if score #tmp bb_voting_on <= #tmp bb_player_count if score #build pntv = #tmp players_voted run function buildbattle:builder_voting
-execute if score #tmp bb_voting_on > #tmp bb_player_count if score #build pntv = #tmp players_voted run function buildbattle:ranking
+execute if score #tmp bb_voting_on > #tmp bb_player_count if score #build pntv = #tmp players_voted run function buildbattle:ranking1
