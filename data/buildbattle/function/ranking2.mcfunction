@@ -13,6 +13,8 @@ scoreboard objectives remove players_voted
 scoreboard objectives remove vote_count
 scoreboard objectives remove bb_points
 scoreboard objectives remove rank
+scoreboard objectives remove bb_points
+scoreboard objectives remove builder_number
 
 scoreboard players set #tmp bb_player_count 0
 scoreboard players set #tmp started 0
