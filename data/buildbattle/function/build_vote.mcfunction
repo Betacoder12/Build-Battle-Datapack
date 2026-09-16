@@ -14,7 +14,7 @@ scoreboard players set #tmp bb_voting_on 0
 scoreboard players set @a[tag=builder] vote_count 0
 
 scoreboard objectives add pntv dummy
-execute store result score #build pntv run scoreboard players get #tmp bb_voting_on
+execute store result score #build pntv run scoreboard players get #tmp bb_player_count
 scoreboard players remove #build pntv 1
 
 clear @a[tag=builder] *
