@@ -2,9 +2,9 @@ execute positioned as @e[type=marker,limit=1,name=bb_gold] run kill @e[type=mann
 execute positioned as @e[type=marker,limit=1,name=bb_iron] run kill @e[type=mannequin,distance=..2]
 execute positioned as @e[type=marker,limit=1,name=bb_bronze] run kill @e[type=mannequin,distance=..2]
 
-execute as @a[tag=builder,scores={rank=0}] positioned as @e[type=marker,limit=1,name=bb_gold] run function buildbattle:wmannequin
-execute as @a[tag=builder,scores={rank=1}] positioned as @e[type=marker,limit=1,name=bb_iron] run function buildbattle:wmannequin
-execute as @a[tag=builder,scores={rank=2}] positioned as @e[type=marker,limit=1,name=bb_bronze] run function buildbattle:wmannequin
+execute as @a[tag=builder,scores={rank=0}] positioned as @e[type=marker,limit=1,name=bb_gold] run function buildbattle:wmannequin with entity @s
+execute as @a[tag=builder,scores={rank=1}] positioned as @e[type=marker,limit=1,name=bb_iron] run function buildbattle:wmannequin with entity @s
+execute as @a[tag=builder,scores={rank=2}] positioned as @e[type=marker,limit=1,name=bb_bronze] run function buildbattle:wmannequin with entity @s
 
 tag @a[tag=builder] remove builder
 
